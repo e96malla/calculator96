@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Calculator96</title>
+         <link rel="stylesheet" href="stylecal.css">
+    </head>
+    <body>
+      <my-navbar></my-navbar>
+        
+        <div class="back">
+                <div class="from-to">
+                    <select onclick="test()" id="from">
+                        <option>متر</option>
+                        <option>ميكرون</option>
+                        <option>مليمتر</option>
+                        <option>سنتيمتر</option>
+                        <option>كيلومتر</option>
+                        <option>بوصة</option>
+                        <option>قدم</option>
+                        <option>ياردة</option>
+                        <option>ميل</option>
+                    </select>
+                    <select onclick="test()" id="to">
+                        <option>ميل</option>
+                        <option>ميكرون</option>
+                        <option>مليمتر</option>
+                        <option>سنتيمتر</option>
+                        <option>كيلومتر</option>
+                        <option>متر</option>
+                        <option>بوصة</option>
+                        <option>قدم</option>
+                        <option>ياردة</option>
+                    </select>
+                </div>
+                <div class="values">
+                    <input type="number" onkeyup="test()" id="value1" placeholder="0" >
+                    <input type="number" id="value2" placeholder="0" style="pointer-events: none;" >
+                </div>            
+        </div>
+        
+        <script>
+            function test(){
+                var x , y , v1 ;
+                x = document.getElementById("from").value  ;
+                y = document.getElementById("to").value  ;
+                v1 = document.getElementById("value1").value  ;
+                if(x == "متر"){
+                    if(y == "متر"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "ميكرون"){
+                        document.getElementById("value2").value = Math.round((v1*1000000)* 10000)/10000 ;
+                    }else if(y == "مليمتر"){
+                        document.getElementById("value2").value = Math.round((v1*1000)* 10000)/10000 ;
+                    }else if(y == "سنتيمتر"){
+                        document.getElementById("value2").value = Math.round((v1*100)* 10000)/10000 ;
+                    }else if(y == "كيلومتر"){
+                        document.getElementById("value2").value = Math.round((v1/1000)* 10000)/10000 ;
+                    }else if(y == "بوصة"){
+                        document.getElementById("value2").value = Math.round((v1*39.37008)* 10000)/10000 ;
+                    }else if(y == "قدم"){
+                        document.getElementById("value2").value = Math.round((v1*3.28084)* 10000)/10000 ;
+                    }else if(y == "ياردة"){
+                        document.getElementById("value2").value = Math.round((v1*1.093613)* 10000)/10000 ;
+                    }else{
+                        document.getElementById("value2").value = Math.round((v1/1609.344)* 10000)/10000 ;
+                    }
+                }else if(x == "ميكرون"){
+                    if(y == "متر"){
+                        document.getElementById("value2").value = Math.round((v1/1000000)* 10000)/10000 ;
+                    }else if(y == "ميكرون"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "مليمتر"){
+                        document.getElementById("value2").value = Math.round((v1/1000)* 10000)/10000 ;
+                    }else if(y == "سنتيمتر"){
+                        document.getElementById("value2").value = Math.round((v1/10000)* 10000)/10000 ;
+                    }else if(y == "كيلومتر"){
+                        document.getElementById("value2").value = Math.round((v1/1000000000)* 10000)/10000 ;
+                    }else if(y == "بوصة"){
+                        document.getElementById("value2").value = Math.round((v1/25400)* 10000)/10000 ;
+                    }else if(y == "قدم"){
+                        document.getElementById("value2").value = Math.round((v1/304800)* 10000)/10000 ;
+                    }else if(y == "ياردة"){
+                        document.getElementById("value2").value = Math.round((v1/914400)* 10000)/10000 ;
+                    }else{
+                        document.getElementById("value2").value = Math.round((v1/1609344000)* 10000)/10000 ;
+                    }
+                }else if(x == "مليمتر"){
+                    if(y == "متر"){
+                        document.getElementById("value2").value = Math.round((v1/1000)* 10000)/10000 ;
+                    }else if(y == "ميكرون"){
+                        document.getElementById("value2").value = Math.round((v1*1000)* 10000)/10000 ;
+                    }else if(y == "مليمتر"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "سنتيمتر"){
+                        document.getElementById("value2").value = Math.round((v1/10)* 10000)/10000 ;
+                    }else if(y == "كيلومتر"){
+                        document.getElementById("value2").value = Math.round((v1/1000000)* 10000)/10000 ;
+                    }else if(y == "بوصة"){
+                        document.getElementById("value2").value = Math.round((v1/25.4)* 10000)/10000 ;
+                    }else if(y == "قدم"){
+                        document.getElementById("value2").value = Math.round((v1/304.8)* 10000)/10000 ;
+                    }else if(y == "ياردة"){
+                        document.getElementById("value2").value = Math.round((v1/914.4)* 10000)/10000 ;
+                    }else{
+                        document.getElementById("value2").value = Math.round((v1/1609344)* 10000)/10000 ;
+                    }
+                }else if(x == "سنتيمتر"){
+                    if(y == "متر"){
+                        document.getElementById("value2").value = Math.round((v1/100)* 10000)/10000 ;
+                    }else if(y == "ميكرون"){
+                        document.getElementById("value2").value = Math.round((v1*10000)* 10000)/10000 ;
+                    }else if(y == "مليمتر"){
+                        document.getElementById("value2").value = Math.round((v1*10)* 10000)/10000 ;
+                    }else if(y == "سنتيمتر"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "كيلومتر"){
+                        document.getElementById("value2").value = Math.round((v1/100000)* 10000)/10000 ;
+                    }else if(y == "بوصة"){
+                        document.getElementById("value2").value = Math.round((v1/2.54)* 10000)/10000 ;
+                    }else if(y == "قدم"){
+                        document.getElementById("value2").value = Math.round((v1/30.48)* 10000)/10000 ;
+                    }else if(y == "ياردة"){
+                        document.getElementById("value2").value = Math.round((v1/91.44)* 10000)/10000 ;
+                    }else{
+                        document.getElementById("value2").value = Math.round((v1/160934.4)* 10000)/10000 ;
+                    }
+                }else if(x == "كيلومتر"){
+                    if(y == "متر"){
+                        document.getElementById("value2").value = Math.round((v1*1000)* 10000)/10000 ;
+                    }else if(y == "ميكرون"){
+                        document.getElementById("value2").value = Math.round((v1*1000000000)* 10000)/10000 ;
+                    }else if(y == "مليمتر"){
+                        document.getElementById("value2").value = Math.round((v1*1000000)* 10000)/10000 ;
+                    }else if(y == "سنتيمتر"){
+                        document.getElementById("value2").value = Math.round((v1*100000)* 10000)/10000 ;
+                    }else if(y == "كيلومتر"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "بوصة"){
+                        document.getElementById("value2").value = Math.round((v1*39370.08)* 10000)/10000 ;
+                    }else if(y == "قدم"){
+                        document.getElementById("value2").value = Math.round((v1*3280.84)* 10000)/10000 ;
+                    }else if(y == "ياردة"){
+                        document.getElementById("value2").value = Math.round((v1*1093.613)* 10000)/10000 ;
+                    }else{
+                        document.getElementById("value2").value = Math.round((v1/1.609344)* 10000)/10000 ;
+                    }
+                }else if(x == "بوصة"){
+                    if(y == "متر"){
+                        document.getElementById("value2").value = Math.round((v1/39.37008)* 10000)/10000 ;
+                    }else if(y == "ميكرون"){
+                        document.getElementById("value2").value = Math.round((v1*25400)* 10000)/10000 ;
+                    }else if(y == "مليمتر"){
+                        document.getElementById("value2").value = Math.round((v1*25.4)* 10000)/10000 ;
+                    }else if(y == "سنتيمتر"){
+                        document.getElementById("value2").value = Math.round((v1*2.54)* 10000)/10000 ;
+                    }else if(y == "كيلومتر"){
+                        document.getElementById("value2").value = Math.round((v1/39370.08)* 10000)/10000 ;
+                    }else if(y == "بوصة"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "قدم"){
+                        document.getElementById("value2").value = Math.round((v1/12)* 10000)/10000 ;
+                    }else if(y == "ياردة"){
+                        document.getElementById("value2").value = Math.round((v1/36)* 10000)/10000 ;
+                    }else{
+                        document.getElementById("value2").value = Math.round((v1/63360)* 10000)/10000 ;
+                    }
+                }else if(x == "قدم"){
+                    if(y == "متر"){
+                        document.getElementById("value2").value = Math.round((v1/3.28084)* 10000)/10000 ;
+                    }else if(y == "ميكرون"){
+                        document.getElementById("value2").value = Math.round((v1*304800)* 10000)/10000 ;
+                    }else if(y == "مليمتر"){
+                        document.getElementById("value2").value = Math.round((v1*304.8)* 10000)/10000 ;
+                    }else if(y == "سنتيمتر"){
+                        document.getElementById("value2").value = Math.round((v1*30.48)* 10000)/10000 ;
+                    }else if(y == "كيلومتر"){
+                        document.getElementById("value2").value = Math.round((v1/3280.84)* 10000)/10000 ;
+                    }else if(y == "بوصة"){
+                        document.getElementById("value2").value = Math.round((v1*12)* 10000)/10000 ;
+                    }else if(y == "قدم"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "ياردة"){
+                        document.getElementById("value2").value = Math.round((v1/3)* 10000)/10000 ;
+                    }else{
+                        document.getElementById("value2").value = Math.round((v1/5280)* 10000)/10000 ;
+                    }
+                }else if(x == "ياردة"){
+                    if(y == "متر"){
+                        document.getElementById("value2").value = Math.round((v1/1.093613)* 10000)/10000 ;
+                    }else if(y == "ميكرون"){
+                        document.getElementById("value2").value = Math.round((v1*914400)* 10000)/10000 ;
+                    }else if(y == "مليمتر"){
+                        document.getElementById("value2").value = Math.round((v1*914.4)* 10000)/10000 ;
+                    }else if(y == "سنتيمتر"){
+                        document.getElementById("value2").value = Math.round((v1*91.44)* 10000)/10000 ;
+                    }else if(y == "كيلومتر"){
+                        document.getElementById("value2").value = Math.round((v1/1093.613)* 10000)/10000 ;
+                    }else if(y == "بوصة"){
+                        document.getElementById("value2").value = Math.round((v1*36)* 10000)/10000 ;
+                    }else if(y == "قدم"){
+                        document.getElementById("value2").value = Math.round((v1*3)* 10000)/10000 ;
+                    }else if(y == "ياردة"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else{
+                        document.getElementById("value2").value = Math.round((v1/1760)* 10000)/10000 ;
+                    }
+                }else{
+                    if(y == "متر"){
+                        document.getElementById("value2").value = Math.round((v1*1609.344)* 10000)/10000 ;
+                    }else if(y == "ميكرون"){
+                        document.getElementById("value2").value = Math.round((v1*1609344000)* 10000)/10000 ;
+                    }else if(y == "مليمتر"){
+                        document.getElementById("value2").value = Math.round((v1*1609344)* 10000)/10000 ;
+                    }else if(y == "سنتيمتر"){
+                        document.getElementById("value2").value = Math.round((v1*160934.4)* 10000)/10000 ;
+                    }else if(y == "كيلومتر"){
+                        document.getElementById("value2").value = Math.round((v1*1.609344)* 10000)/10000 ;
+                    }else if(y == "بوصة"){
+                        document.getElementById("value2").value = Math.round((v1*63360)* 10000)/10000 ;
+                    }else if(y == "قدم"){
+                        document.getElementById("value2").value = Math.round((v1*5280)* 10000)/10000 ;
+                    }else if(y == "ياردة"){
+                        document.getElementById("value2").value = Math.round((v1*1760)* 10000)/10000 ;
+                    }else{
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }
+                }
+            }
+        </script>                    
+        <script src="jscal.js"></script>
+        
+    </body>
+</html>

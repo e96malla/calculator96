@@ -1,0 +1,187 @@
+@font-face {font-family: Amiri; src: url("Amiri.ttf") format("truetype"); } 
+.font1 {font-family: Amiri; }
+@font-face {font-family: Khebrat; src: url("Amiri.ttf") format("truetype"); } 
+.font2 {font-family: Khebrat;}
+/* Start body style ........................................................................................................*/
+              *{
+                  font-size: 25px;
+              }
+              body{
+                  background: linear-gradient(to right, #42bf6b, #f4f973);
+              }
+ /* Start sidenav style ........................................................................................................*/
+             .sidenav {
+                height: 100%;
+                width: 0;
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                background-color: rgba(255, 255, 255, 0.8);
+                overflow-x: hidden;
+                transition: 0.5s;
+              }
+
+              .sidenav a {
+                color: black;
+                padding-right:30px;
+                text-decoration: none;
+                font-size: 25px;
+                display: block;
+                transition: 0.3s;
+
+              }
+             .sidenav a img{
+                 padding-left: 15px;
+             }
+             .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                left: 20px;
+                font-size: 30px;
+              }
+ /* Start simple page style ........................................................................................................*/
+             .texts{
+                 width: 80%;
+                 position: fixed;
+                 top: 50px ;
+                 left: 10% ;
+             }
+             .text{
+                 height: 50px;
+                 pointer-events: none;
+                 text-align: left;
+                 background-color: transparent;
+                 border: none;
+                 direction: ltr ;
+             }
+             .result{
+                 height: 50px;
+                 pointer-events: none;
+                 text-align: right;
+                 background-color: transparent;
+                 color: #626262;
+                 border: none;
+             }
+             .buttons{
+                 width: 80%;
+                 position: fixed;
+                 bottom: 0 ;
+                 left: 10% ;
+             }
+              .row{
+                  width: 100%;
+                  height: 52px;
+                  padding-bottom: 12px;
+              }
+             .box{
+                 float: left;
+                 width: 25%;
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+             }
+             .box2{
+                 float: left;
+                 width: 50%;
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+             }
+              .button-num{
+                   width: 50px;
+                   height: 50px;
+                   border-radius: 50%;
+                   border: none;
+                   background-color: #f4f9a2;
+               }
+
+               .button-opr{
+                   width: 50px;
+                   height: 50px;
+                   border-radius: 50%;
+                   border: none;
+                   color: #f4f9a2;
+                   background: linear-gradient(to top, #8efefc, #0404c3);
+               }
+               .button-opr2{
+                   width: 90%;
+                   height: 50px;
+                   border-radius: 15px;
+                   border: none;
+                   color: #f4f9a2;
+                   background-color: #0a4101;
+               }
+ /* Start scientific page style ........................................................................................................*/
+.cont{
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ /* Start length page style ........................................................................................................*/
+.back{
+    width: 90%;
+    height: 150px;
+    position: fixed;
+    top: 75px ;
+    left: 5% ;
+    background-color: #fff;
+    border-radius: 15px;
+}
+.from-to{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.from-to select{
+    width: 45%;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    background-color: #a5a5a5;
+    font-family: Amiri;
+}
+.values{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.values input{
+    width: 45%;
+    height: 40px;
+    border: none;
+}
+ /* Start about page style ........................................................................................................*/
+             .body2{
+                 background: linear-gradient(to top, #8efefc, #0404c3);
+                 position: absolute;
+                 top: 0 ;
+                 left: 0 ;
+                 width: 100%;
+                 height: 100%;
+             }
+             .back2{
+                 position: fixed;
+                 top: 8% ;
+                 left: 10% ;
+                 width: 80%;
+                 height: 84%;
+                 background-color: #fff;
+                 justify-content: center;
+                 align-items: center;
+                 text-align: center;
+                 border-radius: 20px;
+             }
+             .bottom-text{
+                 position: absolute;
+                 bottom: 10px;
+                 font-size: 20px;
+                 padding: 10px;
+             }
+ /* Start mirath page style ........................................................................................................*/
+
+

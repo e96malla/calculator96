@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Calculator96</title>
+         <link rel="stylesheet" href="stylecal.css">
+    </head>
+    <body>
+
+        
+      <my-navbar></my-navbar>
+        
+        
+        <div class="back">
+                <div class="from-to">
+                    <select onclick="test()" id="from">
+                        <option>ملي لتر</option>
+                        <option>سنتيمتر مكعب</option>
+                        <option>ملعقة صغيرة</option>
+                        <option>ملعقة كبيرة</option>
+                        <option>بوصة مكعبة</option>
+                        <option>قدم مكعب</option>
+                        <option>لتر</option>
+                        <option>جالون</option>
+                        <option>متر مكعب</option> 
+                    </select>
+                    <select onclick="test()" id="to">
+                        <option>متر مكعب</option> 
+                        <option>ملي لتر</option>
+                        <option>سنتيمتر مكعب</option>
+                        <option>ملعقة صغيرة</option>
+                        <option>ملعقة كبيرة</option>
+                        <option>بوصة مكعبة</option>
+                        <option>قدم مكعب</option>
+                        <option>لتر</option>
+                        <option>جالون</option>
+                    </select>
+                </div>
+                <div class="values">
+                    <input type="number" onkeyup="test()" id="value1" placeholder="0" >
+                    <input type="number" id="value2" placeholder="0" style="pointer-events: none;" >
+                </div>
+            </div>
+
+        <script>
+            function test(){
+                var x , y , v1 ;
+                x = document.getElementById("from").value  ;
+                y = document.getElementById("to").value  ;
+                v1 = document.getElementById("value1").value ;
+                if(x == "ملي لتر"){
+                    if(y == "ملي لتر"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "سنتيمتر مكعب"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "ملعقة صغيرة"){
+                        document.getElementById("value2").value = Math.round((v1/4.9)* 10000)/10000 ;
+                    }else if(y == "ملعقة كبيرة"){
+                        document.getElementById("value2").value = Math.round((v1/14.7)* 10000)/10000 ;
+                    }else if(y == "بوصة مكعبة"){
+                        document.getElementById("value2").value = Math.round((v1/16.38)* 10000)/10000 ;
+                    }else if(y == "قدم مكعب"){
+                        document.getElementById("value2").value = Math.round((v1/28316.8)* 10000)/10000 ;
+                    }else if(y == "لتر"){
+                        document.getElementById("value2").value = Math.round((v1/1000)* 10000)/10000 ;
+                    }else if(y == "جالون"){
+                        document.getElementById("value2").value = Math.round((v1/3785.4)* 10000)/10000 ;
+                    }else{
+                        document.getElementById("value2").value = Math.round((v1/1000000)* 10000)/10000 ;
+                    }
+                }else if(x == "سنتيمتر مكعب"){
+                    if(y == "ملي لتر"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "سنتيمتر مكعب"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "ملعقة صغيرة"){
+                        document.getElementById("value2").value = Math.round((v1/4.9)* 10000)/10000 ;
+                    }else if(y == "ملعقة كبيرة"){
+                        document.getElementById("value2").value = Math.round((v1/14.7)* 10000)/10000 ;
+                    }else if(y == "بوصة مكعبة"){
+                        document.getElementById("value2").value = Math.round((v1/16.38)* 10000)/10000 ;
+                    }else if(y == "قدم مكعب"){
+                        document.getElementById("value2").value = Math.round((v1/28316.8)* 10000)/10000 ;
+                    }else if(y == "لتر"){
+                        document.getElementById("value2").value = Math.round((v1/1000)* 10000)/10000 ;
+                    }else if(y == "جالون"){
+                        document.getElementById("value2").value = Math.round((v1/3785.4)* 10000)/10000 ;
+                    }else{
+                        document.getElementById("value2").value = Math.round((v1/1000000)* 10000)/10000 ;
+                    }
+                }else if(x == "ملعقة صغيرة"){
+                    if(y == "ملي لتر"){
+                        document.getElementById("value2").value = Math.round((v1*4.9)* 10000)/10000 ;
+                    }else if(y == "سنتيمتر مكعب"){
+                        document.getElementById("value2").value = Math.round((v1*4.9)* 10000)/10000 ;
+                    }else if(y == "ملعقة صغيرة"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "ملعقة كبيرة"){
+                        document.getElementById("value2").value = Math.round((v1/3)* 10000)/10000 ;
+                    }else if(y == "بوصة مكعبة"){
+                        document.getElementById("value2").value = Math.round((v1/3.32)* 10000)/10000 ;
+                    }else if(y == "قدم مكعب"){
+                        document.getElementById("value2").value = Math.round((v1/5745.03)* 10000)/10000 ;
+                    }else if(y == "لتر"){
+                        document.getElementById("value2").value = Math.round((v1/202.88)* 10000)/10000 ;
+                    }else if(y == "جالون"){
+                        document.getElementById("value2").value = Math.round((v1/768)* 10000)/10000 ;
+                    }else{
+                        document.getElementById("value2").value = Math.round((v1/202884.1)* 10000)/10000 ;
+                    }
+                }else if(x == "ملعقة كبيرة"){
+                    if(y == "ملي لتر"){
+                        document.getElementById("value2").value = Math.round((v1*14.78676)* 10000)/10000 ;
+                    }else if(y == "سنتيمتر مكعب"){
+                        document.getElementById("value2").value = Math.round((v1*14.78676)* 10000)/10000 ;
+                    }else if(y == "ملعقة صغيرة"){
+                        document.getElementById("value2").value = Math.round((v1*3)* 10000)/10000 ;
+                    }else if(y == "ملعقة كبيرة"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "بوصة مكعبة"){
+                        document.getElementById("value2").value = Math.round((v1/1.108225)* 10000)/10000 ;
+                    }else if(y == "قدم مكعب"){
+                        document.getElementById("value2").value = Math.round((v1/1915.013)* 10000)/10000 ;
+                    }else if(y == "لتر"){
+                        document.getElementById("value2").value = Math.round((v1/67.62805)* 10000)/10000 ;
+                    }else if(y == "جالون"){
+                        document.getElementById("value2").value = Math.round((v1/256)* 10000)/10000 ;
+                    }else{
+                        document.getElementById("value2").value = Math.round((v1/67628)* 10000)/10000 ;
+                    }
+                }else if(x == "بوصة مكعبة"){
+                    if(y == "ملي لتر"){
+                        document.getElementById("value2").value = Math.round((v1*16.3)* 10000)/10000 ;
+                    }else if(y == "سنتيمتر مكعب"){
+                        document.getElementById("value2").value = Math.round((v1*16.3)* 10000)/10000 ;
+                    }else if(y == "ملعقة صغيرة"){
+                        document.getElementById("value2").value = Math.round((v1*3.32)* 10000)/10000 ;
+                    }else if(y == "ملعقة كبيرة"){
+                        document.getElementById("value2").value = Math.round((v1*1.108225)* 10000)/10000 ;
+                    }else if(y == "بوصة مكعبة"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "قدم مكعب"){
+                        document.getElementById("value2").value = Math.round((v1/1728)* 10000)/10000 ;
+                    }else if(y == "لتر"){
+                        document.getElementById("value2").value = Math.round((v1/61.02374)* 10000)/10000 ;
+                    }else if(y == "جالون"){
+                        document.getElementById("value2").value = Math.round((v1/231)* 10000)/10000 ;
+                    }else{
+                        document.getElementById("value2").value = Math.round((v1/61023.7)* 10000)/10000 ;
+                    }
+                }else if(x == "قدم مكعب"){
+                    if(y == "ملي لتر"){
+                        document.getElementById("value2").value = Math.round((v1*28316.8)* 10000)/10000 ;
+                    }else if(y == "سنتيمتر مكعب"){
+                        document.getElementById("value2").value = Math.round((v1*28316.8)* 10000)/10000 ;
+                    }else if(y == "ملعقة صغيرة"){
+                        document.getElementById("value2").value = Math.round((v1*5745.03)* 10000)/10000 ;
+                    }else if(y == "ملعقة كبيرة"){
+                        document.getElementById("value2").value = Math.round((v1*1915.013)* 10000)/10000 ;
+                    }else if(y == "بوصة مكعبة"){
+                        document.getElementById("value2").value = Math.round((v1*1728)* 10000)/10000 ;
+                    }else if(y == "قدم مكعب"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "لتر"){
+                        document.getElementById("value2").value = Math.round((v1*28.3)* 10000)/10000 ;
+                    }else if(y == "جالون"){
+                        document.getElementById("value2").value = Math.round((v1*7.48)* 10000)/10000 ;
+                    }else{
+                        document.getElementById("value2").value = Math.round((v1/35.3)* 10000)/10000 ;
+                    }
+                }else if(x == "لتر"){
+                    if(y == "ملي لتر"){
+                        document.getElementById("value2").value = Math.round((v1*1000)* 10000)/10000 ;
+                    }else if(y == "سنتيمتر مكعب"){
+                        document.getElementById("value2").value = Math.round((v1*1000)* 10000)/10000 ;
+                    }else if(y == "ملعقة صغيرة"){
+                        document.getElementById("value2").value = Math.round((v1*202.88)* 10000)/10000 ;
+                    }else if(y == "ملعقة كبيرة"){
+                        document.getElementById("value2").value = Math.round((v1*67.62805)* 10000)/10000 ;
+                    }else if(y == "بوصة مكعبة"){
+                        document.getElementById("value2").value = Math.round((v1*61.02374)* 10000)/10000 ;
+                    }else if(y == "قدم مكعب"){
+                        document.getElementById("value2").value = Math.round((v1/28.3)* 10000)/10000 ;
+                    }else if(y == "لتر"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "جالون"){
+                        document.getElementById("value2").value = Math.round((v1/3.7)* 10000)/10000 ;
+                    }else{
+                        document.getElementById("value2").value = Math.round((v1/1000)* 10000)/10000 ;
+                    }
+                }else if(x == "جالون"){
+                    if(y == "ملي لتر"){
+                        document.getElementById("value2").value = Math.round((v1*3785.4)* 10000)/10000 ;
+                    }else if(y == "سنتيمتر مكعب"){
+                        document.getElementById("value2").value = Math.round((v1*3785.4)* 10000)/10000 ;
+                    }else if(y == "ملعقة صغيرة"){
+                        document.getElementById("value2").value = Math.round((v1*768)* 10000)/10000 ;
+                    }else if(y == "ملعقة كبيرة"){
+                        document.getElementById("value2").value = Math.round((v1*256)* 10000)/10000 ;
+                    }else if(y == "بوصة مكعبة"){
+                        document.getElementById("value2").value = Math.round((v1*231)* 10000)/10000 ;
+                    }else if(y == "قدم مكعب"){
+                        document.getElementById("value2").value = Math.round((v1/7.48)* 10000)/10000 ;
+                    }else if(y == "لتر"){
+                        document.getElementById("value2").value = Math.round((v1*3.7)* 10000)/10000 ;
+                    }else if(y == "جالون"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else{
+                        document.getElementById("value2").value = Math.round((v1/264.17)* 10000)/10000 ;
+                    }
+                }else{
+                    if(y == "ملي لتر"){
+                        document.getElementById("value2").value = Math.round((v1*1000000)* 10000)/10000 ;
+                    }else if(y == "سنتيمتر مكعب"){
+                        document.getElementById("value2").value = Math.round((v1*1000000)* 10000)/10000 ;
+                    }else if(y == "ملعقة صغيرة"){
+                        document.getElementById("value2").value = Math.round((v1*202884.1)* 10000)/10000 ;
+                    }else if(y == "ملعقة كبيرة"){
+                        document.getElementById("value2").value = Math.round((v1*67628)* 10000)/10000 ;
+                    }else if(y == "بوصة مكعبة"){
+                        document.getElementById("value2").value = Math.round((v1*61023.7)* 10000)/10000 ;
+                    }else if(y == "قدم مكعب"){
+                        document.getElementById("value2").value = Math.round((v1*35.3)* 10000)/10000 ;
+                    }else if(y == "لتر"){
+                        document.getElementById("value2").value = Math.round((v1*1000)* 10000)/10000 ;
+                    }else if(y == "جالون"){
+                        document.getElementById("value2").value = Math.round((v1*264.17)* 10000)/10000 ;
+                    }else{
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }
+                }
+            }
+        </script>
+        <script src="jscal.js"></script>
+        
+    </body>
+</html>

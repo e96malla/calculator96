@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator96</title>
+    <style type="text/css">
+    @font-face {font-family: Amiri; src: url("Amiri.ttf") format("truetype"); } 
+    .font1 {font-family: Amiri; }
+        body{
+            background-color: #032721;
+            font-size: 25px;
+            margin: 0;
+        }
+        .bodyPage{
+            background-color: rgba(255, 255, 255, 0.466);
+            border-radius: 20px;
+            position: fixed;
+            width: 80%;
+            height: 90%;
+            margin: 10%;
+            top: 0;
+            text-align: center;
+            color: #032721;
+        }
+        .bodyContent{
+            margin: 5%;
+            width: 90%;
+            height: 90%;
+            z-index: 2;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .imglink{
+          margin-top: 50px;
+        }
+              .sidenav {
+                height: 100%;
+                width: 0;
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                background-color: rgba(255, 255, 255, 0.8);
+                overflow-x: hidden;
+                transition: 0.5s;
+              }
+
+              .sidenav a {
+                color: black;
+                padding-right:30px;
+                text-decoration: none;
+                font-size: 25px;
+                display: block;
+                transition: 0.3s;
+
+              }
+             .sidenav a img{
+                 padding-left: 15px;
+             }
+             .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                left: 20px;
+                font-size: 30px;
+              }
+              input{
+                   color: #fff;
+              }
+    </style>
+</head>
+<body>
+     <my-navbar></my-navbar>
+     <div class="bodyPage">
+          <div class="bodyContent">
+               <div>
+                    <a href="simple.html"><img class="imglink" src="link1.png" /></a>
+                    <a href="mirath.html"><img class="imglink" src="link2.png" /></a>
+                    <a href="zakaa.html"><img class="imglink" src="link3.png" /></a>
+               </div>
+          </div>
+
+          الحاسبة الشاملة
+          
+     </div>
+    <script src="jscal.js"></script>
+</body>
+</html>

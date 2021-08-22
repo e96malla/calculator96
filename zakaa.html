@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator96</title>
+    <style type="text/css">
+    @font-face {font-family: Amiri; src: url("Amiri.ttf") format("truetype"); } 
+    .font1 {font-family: Amiri; }
+        body{
+            background-color: #032721;
+            font-size: 25px;
+            margin: 0;
+        }
+        .noneDisplay {
+            display: none;
+        }
+        .result{
+            color: #fff;
+            background-color: #032721;
+            border: none;
+            pointer-events: none;
+            padding-bottom: 20px;
+        }
+        input , .but , select{
+            width: 100%;
+            height: 50px;
+            padding: 3px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            box-sizing: border-box;
+            font-size: 20px;
+            color: #000;
+            border: none;
+            border-radius: 10px;
+        }
+        input:focus , select:focus {
+            color: #495057;
+            background-color: #fff;
+            border-color: #63faa7;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 60, 255, 0.274);
+        }
+        .but{
+            background: #032721;
+            color: #fff;
+            border: none;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        .nots{
+            font-size: 16px;
+        }
+        .bodyPage{
+            background-color: rgba(255, 255, 255, 0.24);
+            border-radius: 20px;
+            margin: 7% ;
+            width: 86%;
+            margin-bottom: 40px;
+        }
+        .bodyContent{
+            margin: 5%;
+            width: 90%;
+            padding-top: 20px;
+            z-index: 2;
+            color: #fff;
+        }
+    
+    </style>
+</head>
+<body>
+    <div style="margin: 40px;">
+        <a href="index.html"><img src="box-arrow-right.png"></a>
+        <a href="zakaa.html" style="float: left;"><img src="arrow-clockwise.png"></a>
+    </div>
+    <div id="Damount" class="bodyPage">
+        <div  class="bodyContent font1">
+            زكاة المال :
+            <input type="number" id="amount" placeholder=" المبلغ  "/>
+            <input type="number" id="price" placeholder=" سعر جرام الذهب عيار 24 "/>
+            <input type="text" id="R1amount" class="result noneDisplay"/>
+            <button onclick="resultAmount();" class="but">تـحـقـق</button>
+        </div>
+    </div>
+    <div id="Dgold" class="bodyPage">
+        <div class="bodyContent font1">
+            زكاة الذهب :
+            <input type="number" id="gold" placeholder=" الذهب بالجرام "/>
+            <input type="text" id="R1gold" class="result noneDisplay"/>
+            <button onclick="resultGold();" class="but">تـحـقـق</button>
+        </div>
+    </div>
+    <div id="Dsilver" class="bodyPage">
+        <div class="bodyContent font1">
+            زكاة الفضة :
+            <input type="number" id="silver" placeholder=" الفضة بالجرام "/>
+            <input type="text" id="R1silver" class="result noneDisplay"/>
+            <button onclick="resultSilver();" class="but">تـحـقـق</button>
+        </div>
+    </div>
+    <div id="Dcamels" class="bodyPage">
+        <div class="bodyContent font1">
+            زكاة الإبل :
+            <input type="number" id="camels" placeholder=" عدد الأبل "/>
+            <input type="text" id="R1camels" class="result noneDisplay"/>
+            <button onclick="resultCamels();" class="but">تـحـقـق</button>
+        </div>
+    </div>
+    <div id="Dsheep" class="bodyPage">
+        <div class="bodyContent font1">
+            زكاة الغنم :
+            <input type="number" id="sheep" placeholder=" عدد الغنم "/>
+            <input type="text" id="R1sheep" class="result noneDisplay"/>
+            <button onclick="resultSheep();" class="but">تـحـقـق</button>
+        </div>
+    </div>
+    <div id="Dcows" class="bodyPage">
+        <div class="bodyContent font1">
+            زكاة البقر :
+            <input type="number" id="cows" placeholder=" عدد البقر "/>
+            <input type="text" id="R1cows" class="result noneDisplay"/>
+            <button onclick="resultCows();" class="but">تـحـقـق</button>
+        </div>
+    </div>
+    <div id="Dfruits" class="bodyPage">
+        <div class="bodyContent font1">
+            زكاة الزروع والثمار :
+            <input type="number" id="fruits" placeholder=" الكمية بالكيلوجرام  "/>
+            <select id="way">
+                <option>طريقة الري :</option>
+                <option>بدون تكلفة</option>
+                <option>بتكلفة</option>
+                <option>نصفه بتكلفة ونصفه دون تكلفة</option>
+            </select>
+            <input type="text" id="R1fruits" class="result noneDisplay"/>
+            <button onclick="resultFruits();" class="but">تـحـقـق</button>
+        </div>
+    </div>
+    
+    <script src="jscal.js"></script>
+    <script src="jszakaa.js"></script>
+
+</body>
+</html>

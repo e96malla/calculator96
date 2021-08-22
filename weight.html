@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Calculator96</title>
+         <link rel="stylesheet" href="stylecal.css">
+    </head>
+    <body>
+      <my-navbar></my-navbar>
+        
+        <div class="back">
+                <div class="from-to">
+                    <select onclick="test()" id="from">
+                        <option>قيراط</option>
+                        <option>مليغرام</option>
+                        <option>سنتيغرام</option>
+                        <option>غرام</option>
+                        <option>رطل</option>
+                        <option>كيلوغرام</option>
+                        <option>طن امريكي</option>
+                    </select>
+                    <select onclick="test()" id="to">
+                        <option>كيلوغرام</option>
+                        <option>قيراط</option>
+                        <option>مليغرام</option>
+                        <option>سنتيغرام</option>
+                        <option>غرام</option>
+                        <option>رطل</option>
+                        <option>طن امريكي</option>
+                    </select>
+                </div>
+                <div class="values">
+                    <input type="number" onkeyup="test()" id="value1" placeholder="0" >
+                    <input type="number" id="value2" placeholder="0" style="pointer-events: none ;" >
+                </div>
+            </div>
+            <script>
+                function test(){
+                    var x , y , v1 ;
+                x = document.getElementById("from").value  ;
+                y = document.getElementById("to").value  ;
+                v1 = document.getElementById("value1").value ;
+                if(x == "قيراط"){
+                    if(y == "كيلوغرام"){
+                        document.getElementById("value2").value = Math.round((v1/5000)* 10000)/10000 ;
+                    }else if(y == "قيراط"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "مليغرام"){
+                        document.getElementById("value2").value = Math.round((v1*200)* 10000)/10000 ;
+                    }else if(y == "سنتيغرام"){
+                        document.getElementById("value2").value = Math.round((v1*20)* 10000)/10000 ;
+                    }else if(y == "غرام"){
+                        document.getElementById("value2").value = Math.round((v1/5)* 10000)/10000 ;
+                    }else if(y == "رطل"){
+                        document.getElementById("value2").value = Math.round((v1/2267.962)* 10000)/10000 ;
+                    }else {
+                        document.getElementById("value2").value = Math.round((v1/4535924)* 10000)/10000 ;
+                    }
+                }else if(x == "كيلوغرام"){
+                    if(y == "كيلوغرام"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "قيراط"){
+                        document.getElementById("value2").value = Math.round((v1*5000)* 10000)/10000 ;
+                    }else if(y == "مليغرام"){
+                        document.getElementById("value2").value = Math.round((v1*1000000)* 10000)/10000 ;
+                    }else if(y == "سنتيغرام"){
+                        document.getElementById("value2").value = Math.round((v1*100000)* 10000)/10000 ;
+                    }else if(y == "غرام"){
+                        document.getElementById("value2").value = Math.round((v1*1000)* 10000)/10000 ;
+                    }else if(y == "رطل"){
+                        document.getElementById("value2").value = Math.round((v1*2.2046)* 10000)/10000 ;
+                    }else {
+                        document.getElementById("value2").value = Math.round((v1/907.1847)* 10000)/10000 ;
+                    }
+                }else if(x == "مليغرام"){
+                    if(y == "كيلوغرام"){
+                        document.getElementById("value2").value = Math.round((v1/1000000)* 10000)/10000 ;
+                    }else if(y == "قيراط"){
+                        document.getElementById("value2").value = Math.round((v1/200)* 10000)/10000 ;
+                    }else if(y == "مليغرام"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "سنتيغرام"){
+                        document.getElementById("value2").value = Math.round((v1/10)* 10000)/10000 ;
+                    }else if(y == "غرام"){
+                        document.getElementById("value2").value = Math.round((v1/1000)* 10000)/10000 ;
+                    }else if(y == "رطل"){
+                        document.getElementById("value2").value = Math.round((v1/453592.4)* 10000)/10000 ;
+                    }else {
+                        document.getElementById("value2").value = Math.round((v1/907184740)* 10000)/10000 ;
+                    }
+                }else if(x == "سنتيغرام"){
+                    if(y == "كيلوغرام"){
+                        document.getElementById("value2").value = Math.round((v1/100000)* 10000)/10000 ;
+                    }else if(y == "قيراط"){
+                        document.getElementById("value2").value = Math.round((v1/20)* 10000)/10000 ;
+                    }else if(y == "مليغرام"){
+                        document.getElementById("value2").value = Math.round((v1*10)* 10000)/10000 ;
+                    }else if(y == "سنتيغرام"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "غرام"){
+                        document.getElementById("value2").value = Math.round((v1/100)* 10000)/10000 ;
+                    }else if(y == "رطل"){
+                        document.getElementById("value2").value = Math.round((v1/45359.24)* 10000)/10000 ;
+                    }else {
+                        document.getElementById("value2").value = Math.round((v1/90718474)* 10000)/10000 ;
+                    }
+                }else if(x == "غرام"){
+                    if(y == "كيلوغرام"){
+                        document.getElementById("value2").value = Math.round((v1/1000)* 10000)/10000 ;
+                    }else if(y == "قيراط"){
+                        document.getElementById("value2").value = Math.round((v1*5)* 10000)/10000 ;
+                    }else if(y == "مليغرام"){
+                        document.getElementById("value2").value = Math.round((v1*1000)* 10000)/10000 ;
+                    }else if(y == "سنتيغرام"){
+                        document.getElementById("value2").value = Math.round((v1*100)* 10000)/10000 ;
+                    }else if(y == "غرام"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else if(y == "رطل"){
+                        document.getElementById("value2").value = Math.round((v1/453.5924)* 10000)/10000 ;
+                    }else {
+                        document.getElementById("value2").value = Math.round((v1/907184.7)* 10000)/10000 ;
+                    }
+                }else if(x == "رطل"){
+                    if(y == "كيلوغرام"){
+                        document.getElementById("value2").value = Math.round((v1/2.2046)* 10000)/10000 ;
+                    }else if(y == "قيراط"){
+                        document.getElementById("value2").value = Math.round((v1*2267.962)* 10000)/10000 ;
+                    }else if(y == "مليغرام"){
+                        document.getElementById("value2").value = Math.round((v1*453592.4)* 10000)/10000 ;
+                    }else if(y == "سنتيغرام"){
+                        document.getElementById("value2").value = Math.round((v1*45359.24)* 10000)/10000 ;
+                    }else if(y == "غرام"){
+                        document.getElementById("value2").value = Math.round((v1*453.5924)* 10000)/10000 ;
+                    }else if(y == "رطل"){
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }else {
+                        document.getElementById("value2").value = Math.round((v1/2000)* 10000)/10000 ;
+                    }
+                }else{
+                    if(y == "كيلوغرام"){
+                        document.getElementById("value2").value = Math.round((v1*907.1847)* 10000)/10000 ;
+                    }else if(y == "قيراط"){
+                        document.getElementById("value2").value = Math.round((v1*4535924)* 10000)/10000 ;
+                    }else if(y == "مليغرام"){
+                        document.getElementById("value2").value = Math.round((v1*907184740)* 10000)/10000 ;
+                    }else if(y == "سنتيغرام"){
+                        document.getElementById("value2").value = Math.round((v1*90718474)* 10000)/10000 ;
+                    }else if(y == "غرام"){
+                        document.getElementById("value2").value = Math.round((v1*907184.7)* 10000)/10000 ;
+                    }else if(y == "رطل"){
+                        document.getElementById("value2").value = Math.round((v1*2000)* 10000)/10000 ;
+                    }else {
+                        document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                    }
+                }
+
+                }
+            </script>
+
+        
+        <script src="jscal.js"></script>
+        
+    </body>
+</html>

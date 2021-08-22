@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Calculator96</title>
+         <link rel="stylesheet" href="stylecal.css">
+    </head>
+    <body>
+      <my-navbar></my-navbar>
+        
+        <div class="back">
+                <div class="from-to">
+                    <select onclick="test()" id="from">
+                        <option>ملي ثانية</option>
+                        <option>ثانية</option>
+                        <option>دقيقة</option>
+                        <option>ساعة</option>
+                        <option>يوم</option>
+                        <option>اسبوع</option>
+                        <option>سنة</option>
+                    </select>
+                    <select onclick="test()" id="to">
+                        <option>ساعة</option>
+                        <option>ملي ثانية</option>
+                        <option>ثانية</option>
+                        <option>دقيقة</option>
+                        <option>يوم</option>
+                        <option>اسبوع</option>
+                        <option>سنة</option>
+                    </select>
+                </div>
+                <div class="values">
+                    <input type="number" onkeyup="test()" id="value1" placeholder="0" >
+                    <input type="number" id="value2" placeholder="0" style="pointer-events: none;" >
+                </div>
+            </div>
+
+            <script>
+                function test(){
+                    var x , y , v1 ;
+                    x = document.getElementById("from").value  ;
+                    y = document.getElementById("to").value  ;
+                    v1 = document.getElementById("value1").value  ;
+                    if(x == "ملي ثانية"){
+                        if(y == "ملي ثانية"){
+                            document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                        }else if(y == "ثانية"){
+                            document.getElementById("value2").value = Math.round((v1/1000)* 10000)/10000 ;
+                        }else if(y == "دقيقة"){
+                            document.getElementById("value2").value = Math.round((v1/60000)* 10000)/10000 ;
+                        }else if(y == "ساعة"){
+                            document.getElementById("value2").value = Math.round((v1/3600000)* 10000)/10000 ;
+                        }else if(y == "يوم"){
+                            document.getElementById("value2").value = Math.round((v1/86400000)* 10000)/10000 ;
+                        }else if(y == "اسبوع"){
+                            document.getElementById("value2").value = Math.round((v1/604800000)* 10000)/10000 ;
+                         }else{
+                            document.getElementById("value2").value = Math.round((v1/31557600000)* 10000)/10000 ;
+                        }
+                    }else if(x == "ثانية"){
+                        if(y == "ملي ثانية"){
+                            document.getElementById("value2").value = Math.round((v1*1000)* 10000)/10000 ;
+                        }else if(y == "ثانية"){
+                            document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                        }else if(y == "دقيقة"){
+                            document.getElementById("value2").value = Math.round((v1/60)* 10000)/10000 ;
+                        }else if(y == "ساعة"){
+                            document.getElementById("value2").value = Math.round((v1/3600)* 10000)/10000 ;
+                        }else if(y == "يوم"){
+                            document.getElementById("value2").value = Math.round((v1/86400)* 10000)/10000 ;
+                        }else if(y == "اسبوع"){
+                            document.getElementById("value2").value = Math.round((v1/604800)* 10000)/10000 ;
+                         }else{
+                            document.getElementById("value2").value = Math.round((v1/31557600)* 10000)/10000 ;
+                        }
+                    }else if(x == "دقيقة"){
+                        if(y == "ملي ثانية"){
+                            document.getElementById("value2").value = Math.round((v1*60000)* 10000)/10000 ;
+                        }else if(y == "ثانية"){
+                            document.getElementById("value2").value = Math.round((v1*60)* 10000)/10000 ;
+                        }else if(y == "دقيقة"){
+                            document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                        }else if(y == "ساعة"){
+                            document.getElementById("value2").value = Math.round((v1/60)* 10000)/10000 ;
+                        }else if(y == "يوم"){
+                            document.getElementById("value2").value = Math.round((v1/1440)* 10000)/10000 ;
+                        }else if(y == "اسبوع"){
+                            document.getElementById("value2").value = Math.round((v1/10080)* 10000)/10000 ;
+                         }else{
+                            document.getElementById("value2").value = Math.round((v1/525960)* 10000)/10000 ;
+                        }
+                    }else if(x == "ساعة"){
+                        if(y == "ملي ثانية"){
+                            document.getElementById("value2").value = Math.round((v1/3600000)* 10000)/10000 ;
+                        }else if(y == "ثانية"){
+                            document.getElementById("value2").value = Math.round((v1*3600)* 10000)/10000 ;
+                        }else if(y == "دقيقة"){
+                            document.getElementById("value2").value = Math.round((v1*60)* 10000)/10000 ;
+                        }else if(y == "ساعة"){
+                            document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                        }else if(y == "يوم"){
+                            document.getElementById("value2").value = Math.round((v1/24)* 10000)/10000 ;
+                        }else if(y == "اسبوع"){
+                            document.getElementById("value2").value = Math.round((v1/168)* 10000)/10000 ;
+                         }else{
+                            document.getElementById("value2").value = Math.round((v1/8766)* 10000)/10000 ;
+                        }
+                    }else if(x == "يوم"){
+                        if(y == "ملي ثانية"){
+                            document.getElementById("value2").value = Math.round((v1*86400000)* 10000)/10000 ;
+                        }else if(y == "ثانية"){
+                            document.getElementById("value2").value = Math.round((v1*86400)* 10000)/10000 ;
+                        }else if(y == "دقيقة"){
+                            document.getElementById("value2").value = Math.round((v1*1440)* 10000)/10000 ;
+                        }else if(y == "ساعة"){
+                            document.getElementById("value2").value = Math.round((v1*24)* 10000)/10000 ;
+                        }else if(y == "يوم"){
+                            document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                        }else if(y == "اسبوع"){
+                            document.getElementById("value2").value = Math.round((v1/7)* 10000)/10000 ;
+                         }else{
+                            document.getElementById("value2").value = Math.round((v1/365.25)* 10000)/10000 ;
+                        }
+                    }else if(x == "اسبوع"){
+                        if(y == "ملي ثانية"){
+                            document.getElementById("value2").value = Math.round((v1*604800000)* 10000)/10000 ;
+                        }else if(y == "ثانية"){
+                            document.getElementById("value2").value = Math.round((v1*604800)* 10000)/10000 ;
+                        }else if(y == "دقيقة"){
+                            document.getElementById("value2").value = Math.round((v1*10080)* 10000)/10000 ;
+                        }else if(y == "ساعة"){
+                            document.getElementById("value2").value = Math.round((v1*168)* 10000)/10000 ;
+                        }else if(y == "يوم"){
+                            document.getElementById("value2").value = Math.round((v1*7)* 10000)/10000 ;
+                        }else if(y == "اسبوع"){
+                            document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                         }else{
+                            document.getElementById("value2").value = Math.round((v1/52.17857)* 10000)/10000 ;
+                        }
+                    }else{
+                        if(y == "ملي ثانية"){
+                            document.getElementById("value2").value = Math.round((v1*31557600000)* 10000)/10000 ;
+                        }else if(y == "ثانية"){
+                            document.getElementById("value2").value = Math.round((v1*31557600)* 10000)/10000 ;
+                        }else if(y == "دقيقة"){
+                            document.getElementById("value2").value = Math.round((v1*525960)* 10000)/10000 ;
+                        }else if(y == "ساعة"){
+                            document.getElementById("value2").value = Math.round((v1*8766)* 10000)/10000 ;
+                        }else if(y == "يوم"){
+                            document.getElementById("value2").value = Math.round((v1*365.25)* 10000)/10000 ;
+                        }else if(y == "اسبوع"){
+                            document.getElementById("value2").value = Math.round((v1*52.17857)* 10000)/10000 ;
+                         }else{
+                            document.getElementById("value2").value = Math.round((v1)* 10000)/10000 ;
+                        }
+                    }
+                }
+            </script>
+        <script src="jscal.js"></script>
+        
+    </body>
+</html>
