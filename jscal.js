@@ -20,6 +20,7 @@ function inset(num){
     }else{
       document.getElementById("inputtext").value = mytext + num;
     }
+    myresult();
   }
 }
 var mytext ;
