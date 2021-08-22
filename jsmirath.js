@@ -198,7 +198,7 @@ function father(){
     if((xsons == 0 && xgrands == 0 && xdau == 0 && xgrandd == 0 && xbro1== 0 && xbro2 == 0 && xbro3 == 0 && xsis1 == 0 && xsis2 == 0) && ((xmather == 1) && (xhusband == 1 || xwife == 1))){
         yfather = xrest ;
         document.getElementById("R1father").innerHTML = "ثلثي الباقي";
-        document.getElementById("Gfather").innerHTML = " مسألتي الغراوين "
+        document.getElementById("Gfather").innerHTML = " مسألتي الغراوين ";
     }else if(xsons >= 1 || xgrands >= 1 ){
         yfather = xamount/6 ;
         document.getElementById("R1father").innerHTML = "1/6";
@@ -276,7 +276,7 @@ function sis1(){
     if(xsis1 != 0){
         window.Rsis1.style.display = "block";
     }
-    if(xsis1 != 0 && xsons == 0 && xgrands == 0 && xfather == 0 && xgrandf ){
+    if(xsis1 != 0 && xsons == 0 && xgrands == 0 && xfather == 0 && xgrandf == 0 ){
         if(xsis1 == 1 && xdau == 0 && xgrandd == 0 && xbro1 == 0){
             ysis1 = xamount/2 ;
             document.getElementById("R1sis1").innerHTML = "1/2";
@@ -301,7 +301,7 @@ function sis2(){
     if(xsis2 != 0){
         window.Rsis1.style.display = "block";
     }
-    if(xsis2 != 0 && xsons == 0 && xgrands == 0 && xfather == 0 && xgrandf){
+    if(xsis2 != 0 && xsons == 0 && xgrands == 0 && xfather == 0 && xgrandf == 0){
         if(xsis2 == 1 && xdau == 0 && xgrandd == 0 && xbro2 == 0){
             ysis2 = xamount/2 ;
             document.getElementById("R1sis2").innerHTML = "1/2";
@@ -342,7 +342,7 @@ function grands(){
 }
 /* mirath alhawashi ----------------------------------------------------- */
 function bro1(){
-    if(xsons == 0 && xfather == 0 && xgrandf){
+    if(xsons == 0 && xfather == 0 && xgrandf ==0){
         ybro1 = (xrest2/( (xbro1*2) + xsis1))*2;
         document.getElementById("R1bro1").innerHTML = "بالتعصيب";
         document.getElementById("R2bro1").innerHTML = xbro1 + "/" + Math.round((ybro1 * xbro1) * 10000)/10000 ;
@@ -353,7 +353,7 @@ function bro1(){
     window.Rbro1.style.display = "block";
 }
 function bro2(){
-    if(xsons == 0 && xfather == 0 && xgrandf && xbro1 == 0){
+    if(xsons == 0 && xfather == 0 && xgrandf == 0 && xbro1 == 0){
         ybro2 = (xrest2/( (xbro2*2) + xsis2))*2;
         document.getElementById("R1bro2").innerHTML = "بالتعصيب";
         document.getElementById("R2bro2").innerHTML = xbro2 + "/" + Math.round((ybro2 * xbro2) * 10000)/10000 ;
@@ -364,7 +364,7 @@ function bro2(){
     window.Rbro2.style.display = "block";
 }
 function uncle1(){
-    if(xsons == 0 && xfather == 0 && xgrandf && xbro1 == 0 && xbro2 == 0){
+    if(xsons == 0 && xfather == 0 && xgrandf == 0 && xbro1 == 0 && xbro2 == 0){
         yuncle1 = (xrest2/xuncle1);
         document.getElementById("R1uncle1").innerHTML = "بالتعصيب";
         document.getElementById("R2uncle1").innerHTML = xuncle1 + "/" + Math.round((yuncle1 * xuncle1) * 10000)/10000 ;
@@ -375,7 +375,7 @@ function uncle1(){
     window.Runcle1.style.display = "block";
 }
 function uncle2(){
-    if(xsons == 0 && xfather == 0 && xgrandf && xbro1 == 0 && xbro2 == 0){
+    if(xsons == 0 && xfather == 0 && xgrandf == 0 && xbro1 == 0 && xbro2 == 0){
         yuncle2 = (xrest2/xuncle2);
         document.getElementById("R1uncle2").innerHTML = "بالتعصيب";
         document.getElementById("R2uncle2").innerHTML = xuncle2 + "/" + Math.round((yuncle2 * xuncle2) * 10000)/10000 ;

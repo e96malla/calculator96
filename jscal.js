@@ -106,7 +106,7 @@ function closeNav() {
     constructor() {
       super();
       this.innerHTML = `
-      <input id="list" style=" margin: 10px; background-color: transparent; border: none;" type="button" value="&#9776;"  onclick="openNav()">
+      <input id="list" style="font-size: 30px; margin: 10px; background-color: transparent; border: none;" type="button" value="&#9776;"  onclick="openNav()">
       <div id="mySidenav" class="sidenav font1">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href="index.html" class="closebtn" style="margin-left:15px;"><img src="home.png" /></a>
