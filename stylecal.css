@@ -50,7 +50,7 @@
              .text{
                  height: 50px;
                  pointer-events: none;
-                 text-align: center ;
+                 text-align: right ;
                  background-color: transparent;
                  border: none;
                  direction: ltr ;
