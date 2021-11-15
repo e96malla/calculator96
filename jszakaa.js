@@ -125,9 +125,9 @@ function resultSheep(){
         if(xamount<40){
             r = "لا شيء فيها";
         }else if(xamount>=40 && xamount<=120){
-            r = "شاه";
+            r = "1";
         }else if(xamount>=121 && xamount<=200){
-            r = "شاتان";
+            r = "2";
         }else{
             r = Math.floor(xamount/100);
         }

@@ -39,23 +39,23 @@
                     if(y == "درجة مئوية"){
                         document.getElementById("value2").value = v1;
                     }else if(y == "فهرنهايت"){
-                        document.getElementById("value2").value = Math.round(((v1*1.8)+32) * 10000)/10000 ;
+                        document.getElementById("value2").value = Math.round(((v1*1.8)+32) * 1000)/1000 ;
                     }else{
-                        document.getElementById("value2").value = Math.round((v1+273 )* 10000)/10000 ;
+                        document.getElementById("value2").value = Math.round((v1+273 )* 1000)/1000 ;
                     }
                 }else if(x == "فهرنهايت"){
                     if(y == "درجة مئوية"){
-                        document.getElementById("value2").value = Math.round((((v1-32)*5)/9) * 10000)/10000 ;
+                        document.getElementById("value2").value = Math.round((((v1-32)*5)/9) * 1000)/1000 ;
                     }else if(y == "فهرنهايت"){
                         document.getElementById("value2").value = v1;
                     }else{
-                        document.getElementById("value2").value = Math.round(((459.4+v1)/1.8) * 10000)/10000 ;
+                        document.getElementById("value2").value = Math.round(((459.4+v1)/1.8) * 1000)/1000 ;
                     }
                 }else{
                     if(y == "درجة مئوية"){
-                        document.getElementById("value2").value = Math.round((v1-273) * 10000)/10000 ;
+                        document.getElementById("value2").value = Math.round((v1-273) * 1000)/1000 ;
                     }else if(y == "فهرنهايت"){
-                        document.getElementById("value2").value = Math.round(((1.8*v1)-459.4 )* 10000)/10000 ;
+                        document.getElementById("value2").value = Math.round(((1.8*v1)-459.4 )* 1000)/1000 ;
                     }else{
                         document.getElementById("value2").value = v1;
                     }
