@@ -551,7 +551,6 @@ function alfurud(){
         }
     }
     totell = (yhusband + ywife + ymather + ygrandm1 + ygrandm2 + ygrandf + yfather + ydau + ygrandd + ybro3 + ysis1 + ysis2 + ysons + ygrands + ybro1 + ybro2 + yuncle1 + yuncle2) ;
-    //document.write(xbro1);
     if(totell>xamount){
         multifactor = (xamount/totell) ;
         check();

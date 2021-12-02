@@ -1,7 +1,10 @@
  
  /* Start simple page functions ........................................................................................................*/
-function inset(num){
-  var mytext = document.getElementById("inputtext").value ;
+var finalText ;
+finalText = 0 ;
+var mytext ;
+ function inset(num){
+  mytext = document.getElementById("inputtext").value ;
   var lastChar = mytext.charAt(mytext.length - 1);
   var blastChar = mytext.charAt(mytext.length - 2);
   if (mytext.length < 100) {
@@ -20,38 +23,13 @@ function inset(num){
     }else{
       document.getElementById("inputtext").value = mytext + num;
     }
-    myresult();
+    mytext = document.getElementById("inputtext").value ;
   }
-}
-var mytext ;
-function myresult(){
-  try{
-    var mytext = document.getElementById("inputtext").value ;
-    var x ;
-    var y = mytext.length-1;
-    for(i=0; i<=y; i++){
-      x = mytext[i];
-      if(x=="_"){
-        myroot(i,mytext);
-      }if(x == "^"){
-        mypow(i,mytext);
-
-      }
-    }
-    document.getElementById("result").value = eval(mytext);
-      
-    
-    
-  }catch(error){
-    document.getElementById("result").value = "خطأ";
-  }
-}
-function myroot(a){
-  var x = a ;
-
+  myresult();
 }
 function mypow(i,mytext){
   var sum ;
+  var m = 0 ;
   var mytext2 ;
   var n1 ;
   var n2 ;
@@ -59,16 +37,23 @@ function mypow(i,mytext){
   var y1 = i-1 ;
   var y2 = i+1 ;
   while (y1>0) {
-    if(mytext[y1]=="+" || mytext[y1]=="-" || mytext[y1]=="*" || mytext[y1]=="/"){
+    if(mytext[y1]=="-" || mytext[y1]=="+" || mytext[y1]=="*" || mytext[y1]=="/"){
+      if(mytext[y1-1]=="-" || mytext[y1-1]=="+" || mytext[y1-1]=="*" || mytext[y1-1]=="/"){
+        y1--;
+      }
       y1++;
       break;
     }
     y1--;
-
   }
   while (y2<=mytext.length-1) {
-    if(mytext[y2]=="+" || mytext[y2]=="-" || mytext[y2]=="*" || mytext[y2]=="/"){
+ 
+    if(mytext[y2]=="-"){
+      m+=1;
+    }
+    if(mytext[y2]=="+" || m==2 || mytext[y2]=="*" || mytext[y2]=="/"){
       y2--;
+      m = 0 ;
       break;
     }
     y2++;
@@ -78,15 +63,47 @@ function mypow(i,mytext){
   n3 = (y2+1)-y1 ;
   sum = Math.pow(n1, n2);
   mytext2 = Array.prototype.slice.call(mytext);
-  document.getElementById("result").value = mytext2 ;
+  mytext2.splice(y1, n3 , sum);
+  finalText = mytext2.join("") ;
+  myresult();
 }
+function myresult(){
+  try{
+    var x ;
+    if(finalText != 0){
+      mytext = finalText ;
+    }
+    var y = mytext.length-1;
+    for(i=0; i<=y; i++){
+      x = mytext[i];
+      if(x == "^"){
+        mypow(i,mytext);
+        
+      }
+    }
+    document.getElementById("result").value = eval(mytext);
+    finalText = 0 ;
+  }catch(error){
+    document.getElementById("result").value = "خطأ";
+  }
+}
+function myresult2(){
+  document.getElementById("inputtext").value = document.getElementById("result").value;
+  document.getElementById("result").value = ""
+}
+function sqroot(){
+  var rNum ;
+  rNum = eval(mytext);
+  document.getElementById("result").value = Math.sqrt(rNum);
+}
+
 function clean(){
-  document.getElementById("inputtext").value = '';
-  document.getElementById("result").value = '';
+  window.location.reload();
 }
 function back(){
   var x = document.getElementById("inputtext").value;
   document.getElementById("inputtext").value = x.substring(0,x.length - 1);
+  myresult();
 }
 
        
