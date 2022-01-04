@@ -142,17 +142,17 @@
                 <div class="roms">
                     <label >الزوج:</label>
                     <div class="buttons">
-                        <button onclick="plus10('husband');">+</button>
+                        <button onclick="plus2();">+</button>
                         <input  id="husband" />
-                        <button onclick="minus10('husband');">-</button>
+                        <button onclick="minus2();">-</button>
                     </div>
                 </div>
                 <div class="roms">
-                    <label >الزوجة:</label>
+                    <label >الزوجات:</label>
                     <div class="buttons">
-                        <button onclick="plus10('wife');">+</button>
+                        <button onclick="plus3();">+</button>
                         <input  id="wife" />
-                        <button onclick="minus10('wife');">-</button>
+                        <button onclick="minus3();">-</button>
                     </div>
                 </div>
 <!-- منطقة الفروع  -->
@@ -255,222 +255,241 @@
                 <div id="amountErr" class="nonedisplay">
                     الرجاء إدخال المبلغ
                 </div>
+                <label id="amountTotell" class="nonedisplay">مجموع التركة = </label>
 <!-- منطقة الاصول  -->
                 <div id="Rgrandf" class="nonedisplay">
-                    <label>الجد:</label>
+                    <label id="R4grandf" >الجد:</label>
+                    <label id="R5grandf" >الجد:</label>
                     <table>
                         <tr>
-                            <th>النسبة</th><th>النصيب</th><th>للفرد</th>
+                            <th>النسبة</th><th>نصيب الفرد</th>
                         </tr>
                         <tr>
-                            <td id="R1grandf">-</td><td id="R2grandf">-</td><td id="R3grandf">-</td>
+                            <td id="R1grandf">-</td><td id="R2grandf">-</td>
                         </tr>
                     </table>
                     <div class="guide" id="Ggrandf"></div>
                 </div>
                 <div id="Rgrandm1" class="nonedisplay">
-                    <label >جدة الأب:</label>
+                    <label id="R4grandm1" >جدة الأب:</label>
+                    <label id="R5grandm1" >جدة الأب:</label>
                     <table>
                         <tr>
-                            <th>النسبة</th><th>النصيب</th><th>للفرد</th>
+                            <th>النسبة</th><th>نصيب الفرد</th>
                         </tr>
                         <tr>
-                            <td id="R1grandm1">-</td><td id="R2grandm1">-</td><td id="R3grandm1">-</td>
+                            <td id="R1grandm1">-</td><td id="R2grandm1">-</td>
                         </tr>
                     </table>
                     <div class="guide" id="Ggrandm1"></div>
                 </div>
                 <div id="Rgrandm2" class="nonedisplay">
-                    <label >جدة الأم:</label>
+                    <label id="R4grandm2" >جدة الأم:</label>
+                    <label id="R5grandm2" >جدة الأم:</label>
                     <table>
                         <tr>
-                            <th>النسبة</th><th>النصيب</th><th>للفرد</th>
+                            <th>النسبة</th><th>نصيب الفرد</th>
                         </tr>
                         <tr>
-                            <td id="R1grandm2">-</td><td id="R2grandm2">-</td><td id="R3grandm2">-</td>
+                            <td id="R1grandm2">-</td><td id="R2grandm2">-</td>
                         </tr>
                     </table>
                     <div class="guide" id="Ggrandm2"></div>
                 </div>
                 <div id="Rfather" class="nonedisplay">
-                    <label >الأب:</label>
+                    <label id="R4father" >الأب:</label>
+                    <label id="R5father" >الأب:</label>
                     <table>
                         <tr>
-                            <th>النسبة</th><th>النصيب</th><th>للفرد</th>
+                            <th>النسبة</th><th>نصيب الفرد</th>
                         </tr>
                         <tr>
-                            <td id="R1father">-</td><td id="R2father">-</td><td id="R3father">-</td>
+                            <td id="R1father">-</td><td id="R2father">-</td>
                         </tr>
                     </table>
                     <div class="guide" id="Gfather"></div>
                 </div>
                 <div id="Rmather" class="nonedisplay">
-                    <label >الأم:</label>
+                    <label id="R4mather" >الأم:</label>
+                    <label id="R5mather" >الأم:</label>
                     <table>
                         <tr>
-                            <th>النسبة</th><th>النصيب</th><th>للفرد</th>
+                            <th>النسبة</th><th>نصيب الفرد</th>
                         </tr>
                         <tr>
-                            <td id="R1mather">-</td><td id="R2mather">-</td><td id="R3mather">-</td>
+                            <td id="R1mather">-</td><td id="R2mather">-</td>
                         </tr>
                     </table>
                     <div class="guide" id="Gmather"></div>
                 </div>
 <!-- منطقة الزوجية  -->
                 <div id="Rhusband" class="nonedisplay">
-                    <label >الزوج:</label>
+                    <label id="R4husband" >الزوج:</label>
+                    <label id="R5husband" >الزوج:</label>
                     <table>
                         <tr>
-                            <th>النسبة</th><th>النصيب</th><th>للفرد</th>
+                            <th>النسبة</th><th>نصيب الفرد</th>
                         </tr>
                         <tr>
-                            <td id="R1husband">-</td><td id="R2husband">-</td><td id="R3husband">-</td>
+                            <td id="R1husband">-</td><td id="R2husband">-</td>
                         </tr>
                     </table>
                     <div class="guide" id="Ghusband"></div>
                 </div>
                 <div id="Rwife" class="nonedisplay">
-                    <label >الزوجة:</label>
+                    <label id="R4wife" id="R4wife">الزوجات:</label>
+                    <label id="R5wife" id="R5wife">الزوجات:</label>
                     <table>
                         <tr>
-                            <th>النسبة</th><th>النصيب</th><th>للفرد</th>
+                            <th>النسبة</th><th>نصيب الفرد</th>
                         </tr>
                         <tr>
-                            <td id="R1wife">-</td><td id="R2wife">-</td><td id="R3wife">-</td>
+                            <td id="R1wife">-</td><td id="R2wife">-</td>
                         </tr>
                     </table>
                     <div class="guide" id="Gwife"></div>
                 </div>
 <!-- منطقة الفروع  -->
                 <div id="Rsons" class="nonedisplay">
-                    <label >الابن:</label>
+                    <label id="R4sons" >الابن:</label>
+                    <label id="R5sons" >الابن:</label>
                     <table>
                         <tr>
-                            <th>النسبة</th><th>النصيب</th><th>للفرد</th>
+                            <th>النسبة</th><th>نصيب الفرد</th>
                         </tr>
                         <tr>
-                            <td id="R1sons">-</td><td id="R2sons">-</td><td id="R3sons">-</td>
+                            <td id="R1sons">-</td><td id="R2sons">-</td>
                         </tr>
                     </table>
                     <div class="guide" id="Gsons"></div>
                 </div>
                 <div id="Rdau" class="nonedisplay">
-                    <label >البنت:</label>
+                    <label id="R4dau" >البنت:</label>
+                    <label id="R5dau" >البنت:</label>
                     <table>
                         <tr>
-                            <th>النسبة</th><th>النصيب</th><th>للفرد</th>
+                            <th>النسبة</th><th>نصيب الفرد</th>
                         </tr>
                         <tr>
-                            <td id="R1dau">-</td><td id="R2dau">-</td><td id="R3dau">-</td>
+                            <td id="R1dau">-</td><td id="R2dau">-</td>
                         </tr>
                     </table>
                     <div class="guide" id="Gdau"></div>
                 </div>
                 <div id="Rgrands" class="nonedisplay">
-                    <label >ابن الابن:</label>
+                    <label id="R4grands" >ابناء الابن:</label>
+                    <label id="R5grands" >ابناء الابن:</label>
                     <table>
                         <tr>
-                            <th>النسبة</th><th>النصيب</th><th>للفرد</th>
+                            <th>النسبة</th><th>نصيب الفرد</th>
                         </tr>
                         <tr>
-                            <td id="R1grands">-</td><td id="R2grands">-</td><td id="R3grands">-</td>
+                            <td id="R1grands">-</td><td id="R2grands">-</td>
                         </tr>
                     </table>
                     <div class="guide" id="Ggrands"></div>
                 </div>
                 <div id="Rgrandd" class="nonedisplay">
-                    <label >بنت الابن:</label>
+                    <label id="R4grandd" >بنات الابن:</label>
+                    <label id="R5grandd" >بنات الابن:</label>
                     <table>
                         <tr>
-                            <th>النسبة</th><th>النصيب</th><th>للفرد</th>
+                            <th>النسبة</th><th>نصيب الفرد</th>
                         </tr>
                         <tr>
-                            <td id="R1grandd">-</td><td id="R2grandd">-</td><td id="R3grandd">-</td>
+                            <td id="R1grandd">-</td><td id="R2grandd">-</td>
                         </tr>
                     </table>
                     <div class="guide" id="Ggrandd"></div>
                 </div>
 <!-- منطقة الحواشي  -->
                 <div id="Rbro1" class="nonedisplay">
-                    <label >الإخوة الأشقاء:</label>
+                    <label id="R4bro1" >الإخوة الأشقاء:</label>
+                    <label id="R5bro1" >الإخوة الأشقاء:</label>
                     <table>
                         <tr>
-                            <th>النسبة</th><th>النصيب</th><th>للفرد</th>
+                            <th>النسبة</th><th>نصيب الفرد</th>
                         </tr>
                         <tr>
-                            <td id="R1bro1">-</td><td id="R2bro1">-</td><td id="R3bro1">-</td>
+                            <td id="R1bro1">-</td><td id="R2bro1">-</td>
                         </tr>
                     </table>
                     <div class="guide" id="Gbro1"></div>
                 </div>
                 <div id="Rsis1" class="nonedisplay">
-                    <label >الأخوات الشقيقات:</label>
+                    <label id="R4sis1" >الأخوات الشقيقات:</label>
+                    <label id="R5sis1" >الأخوات الشقيقات:</label>
                     <table>
                         <tr>
-                            <th>النسبة</th><th>النصيب</th><th>للفرد</th>
+                            <th>النسبة</th><th>نصيب الفرد</th>
                         </tr>
                         <tr>
-                            <td id="R1sis1">-</td><td id="R2sis1">-</td><td id="R3sis1">-</td>
+                            <td id="R1sis1">-</td><td id="R2sis1">-</td>
                         </tr>
                     </table>
                     <div class="guide" id="Gsis1"></div>
                 </div>
                 <div id="Rbro2" class="nonedisplay">
-                    <label >الإخوة لأب:</label>
+                    <label id="R4bro2" >الإخوة لأب:</label>
+                    <label id="R5bro2" >الإخوة لأب:</label>
                     <table>
                         <tr>
-                            <th>النسبة</th><th>النصيب</th><th>للفرد</th>
+                            <th>النسبة</th><th>نصيب الفرد</th>
                         </tr>
                         <tr>
-                            <td id="R1bro2">-</td><td id="R2bro2">-</td><td id="R3bro2">-</td>
+                            <td id="R1bro2">-</td><td id="R2bro2">-</td>
                         </tr>
                     </table>
                     <div class="guide" id="Gbro2"></div>
                 </div>
                 <div id="Rsis2" class="nonedisplay">
-                    <label >الأخوات لأب:</label>
+                    <label id="R4sis2" >الأخوات لأب:</label>
+                    <label id="R5sis2" >الأخوات لأب:</label>
                     <table>
                         <tr>
-                            <th>النسبة</th><th>النصيب</th><th>للفرد</th>
+                            <th>النسبة</th><th>نصيب الفرد</th>
                         </tr>
                         <tr>
-                            <td id="R1sis2">-</td><td id="R2sis2">-</td><td id="R3sis2">-</td>
+                            <td id="R1sis2">-</td><td id="R2sis2">-</td>
                         </tr>
                     </table>
                     <div class="guide" id="Gsis2"></div>
                 </div>
                 <div id="Rbro3" class="nonedisplay">
-                    <label >الإخوة والأخوات لأم:</label>
+                    <label id="R4bro3" >الإخوة والأخوات لأم:</label>
+                    <label id="R5bro3" >الإخوة والأخوات لأم:</label>
                     <table>
                         <tr>
-                            <th>النسبة</th><th>النصيب</th><th>للفرد</th>
+                            <th>النسبة</th><th>نصيب الفرد</th>
                         </tr>
                         <tr>
-                            <td id="R1bro3">-</td><td id="R2bro3">-</td><td id="R3bro3">-</td>
+                            <td id="R1bro3">-</td><td id="R2bro3">-</td>
                         </tr>
                     </table>
                     <div class="guide" id="Gbro3"></div>
                 </div>
                 <div id="Runcle1" class="nonedisplay">
-                    <label >الأعمام الأشقاء:</label>
+                    <label id="R4uncle1" >الأعمام الأشقاء:</label>
+                    <label id="R5uncle1" >الأعمام الأشقاء:</label>
                     <table>
                         <tr>
-                            <th>النسبة</th><th>النصيب</th><th>للفرد</th>
+                            <th>النسبة</th><th>نصيب الفرد</th>
                         </tr>
                         <tr>
-                            <td id="R1uncle1">-</td><td id="R2uncle1">-</td><td id="R3uncle1">-</td>
+                            <td id="R1uncle1">-</td><td id="R2uncle1">-</td>
                         </tr>
                     </table>
                     <div class="guide" id="Guncle1"></div>
                 </div>
                 <div id="Runcle2" class="nonedisplay">
-                    <label >الأعمام لأب:</label>
+                    <label id="R4uncle2" >الأعمام لأب:</label>
+                    <label id="R5uncle2" >الأعمام لأب:</label>
                     <table>
                         <tr>
-                            <th>النسبة</th><th>النصيب</th><th>للفرد</th>
+                            <th>النسبة</th><th>نصيب الفرد</th>
                         </tr>
                         <tr>
-                            <td id="R1uncle2">-</td><td id="R2uncle2">-</td><td id="R3uncle2">-</td>
+                            <td id="R1uncle2">-</td><td id="R2uncle2">-</td>
                         </tr>
                     </table>
                     <div class="guide" id="Guncle2"></div>
@@ -480,6 +499,6 @@
         </div>
     </div>
     <script src="jscal.js"></script>
-    <script src="jsmirath.js"></script>
+    <script type="text/javascript" src="jsmirath.js"></script>
 </body>
 </html>

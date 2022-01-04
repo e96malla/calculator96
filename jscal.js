@@ -37,7 +37,7 @@ function mypow(i,mytext){
   var y1 = i-1 ;
   var y2 = i+1 ;
   while (y1>0) {
-    if(mytext[y1]=="-" || mytext[y1]=="+" || mytext[y1]=="*" || mytext[y1]=="/"){
+    if(mytext[y1]=="-" || mytext[y1]=="+" || mytext[y1]=="*" || mytext[y1]=="/" || mytext[y1]=="(" || mytext[y1]==")"){
       if(mytext[y1-1]=="-" || mytext[y1-1]=="+" || mytext[y1-1]=="*" || mytext[y1-1]=="/"){
         y1--;
       }
@@ -51,7 +51,7 @@ function mypow(i,mytext){
     if(mytext[y2]=="-"){
       m+=1;
     }
-    if(mytext[y2]=="+" || m==2 || mytext[y2]=="*" || mytext[y2]=="/"){
+    if(mytext[y2]=="+" || m==2 || mytext[y2]=="*" || mytext[y2]=="/" || mytext[y2]=="(" || mytext[y2]==")"){
       y2--;
       m = 0 ;
       break;
